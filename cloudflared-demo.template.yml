@@ -1,0 +1,12 @@
+tunnel: ${CLOUDFLARED_TUNNEL_ID}
+credentials-file: ${CLOUDFLARED_CREDENTIALS_FILE}
+protocol: http2
+
+ingress:
+  - hostname: ${CLOUDFLARED_HOSTNAME}
+    service: http://localhost:3000
+
+  - hostname: www.${CLOUDFLARED_HOSTNAME}
+    service: http://localhost:3000
+
+  - service: http_status:404

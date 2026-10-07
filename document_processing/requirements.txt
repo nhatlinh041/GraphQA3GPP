@@ -1,0 +1,7 @@
+python-docx
+pandas
+mammoth==1.9.1
+neo4j
+beautifulsoup4
+requests
+tqdm
