@@ -1,0 +1,289 @@
+{
+ "A": [
+  {
+   "name": "Llama-3.1-8B",
+   "paper": "TeleMoM: Consensus-Driven Telecom Intelligence via Mixture of Models (Wang et al., 2025)",
+   "url": "https://arxiv.org/abs/2504.02712",
+   "table": "Appendix B, Table I (v2, 1 Jun 2025)",
+   "rag": false,
+   "subset": "full 10k (as stated)",
+   "acc": {
+    "Lexicon": 79.05,
+    "Research overview": 67.83,
+    "Research publications": 68.5,
+    "Standards overview": 63.2,
+    "Standards specifications": 54.72,
+    "overall": 65.64
+   },
+   "status": "suggested",
+   "bibkey": null
+  },
+  {
+   "name": "Qwen2.5-7B",
+   "paper": "TeleMoM: Consensus-Driven Telecom Intelligence via Mixture of Models (Wang et al., 2025)",
+   "url": "https://arxiv.org/abs/2504.02712",
+   "table": "Appendix B, Table I (v2, 1 Jun 2025)",
+   "rag": false,
+   "subset": "full 10k (as stated)",
+   "acc": {
+    "Lexicon": 82.36,
+    "Research overview": 69.55,
+    "Research publications": 70.71,
+    "Standards overview": 67.84,
+    "Standards specifications": 57.34,
+    "overall": 68.09
+   },
+   "status": "suggested",
+   "bibkey": null
+  },
+  {
+   "name": "Active telecom professionals (Humans)",
+   "paper": "TeleQnA (Maatouk et al., 2023)",
+   "url": "https://arxiv.org/abs/2310.15051",
+   "table": "Table II",
+   "rag": false,
+   "subset": "surveys of 10 questions each, 30 professionals — NOT the 10k set",
+   "acc": {
+    "Lexicon": 80.33,
+    "Research overview": 63.66,
+    "Research publications": 68.33,
+    "Standards overview": 61.66,
+    "Standards specifications": 56.33,
+    "overall": 64.86
+   },
+   "status": "cited",
+   "bibkey": "maatouk2023teleqna"
+  },
+  {
+   "name": "Llama-3-8B + Telco-oRAG",
+   "paper": "Telco-oRAG (Bornea et al., arXiv 2505.11856v2)",
+   "url": "https://arxiv.org/abs/2505.11856",
+   "table": "Fig. 11 (printed totals & increments; baselines computed = total - increment); 3GPP total: Sec. IV-F text (Fig. 12)",
+   "rag": true,
+   "subset": "Standards overview/specifications of the 1,840-question 3GPP subset of TeleQnA (Telco-oRAG's '3GPP Standard dataset'); the paper gives no per-subject RAG numbers for the other three subjects",
+   "status": "cited",
+   "bibkey": "bornea2025telco",
+   "acc": {
+    "Standards overview": 82.3,
+    "Standards specifications": 76.0
+   }
+  },
+  {
+   "name": "Mistral-7B + Telco-oRAG",
+   "paper": "Telco-oRAG (Bornea et al., arXiv 2505.11856v2)",
+   "url": "https://arxiv.org/abs/2505.11856",
+   "table": "Fig. 11 (printed totals & increments; baselines computed = total - increment); 3GPP total: Sec. IV-F text (Fig. 12)",
+   "rag": true,
+   "subset": "Standards overview/specifications of the 1,840-question 3GPP subset of TeleQnA (Telco-oRAG's '3GPP Standard dataset'); the paper gives no per-subject RAG numbers for the other three subjects",
+   "status": "cited",
+   "bibkey": "bornea2025telco",
+   "acc": {
+    "Standards overview": 76.3,
+    "Standards specifications": 73.0
+   }
+  }
+ ],
+ "B": [
+  {
+   "name": "OTel-LLM-8.3B-QnA (AT&T)",
+   "paper": "GSMA Open Telco Leaderboard (HF dataset GSMA/leaderboard, last modified 2026-09-15)",
+   "url": "https://huggingface.co/datasets/GSMA/leaderboard",
+   "table": "leaderboard_scores.csv, column teleqna = [0.912, 0.0028]",
+   "rag": false,
+   "subset": "ot-full ~10000 (n inferred from printed stderr: p(1-p)/se² ≈ 10237)",
+   "overall": 91.2,
+   "status": "open",
+   "bibkey": null
+  },
+  {
+   "name": "claude-opus-4.6 (Anthropic)",
+   "paper": "GSMA Open Telco Leaderboard (HF dataset GSMA/leaderboard, last modified 2026-09-15)",
+   "url": "https://huggingface.co/datasets/GSMA/leaderboard",
+   "table": "leaderboard_scores.csv, column teleqna = [0.844, 0.0115]",
+   "rag": false,
+   "subset": "ot-lite ~1000 (n inferred from printed stderr: p(1-p)/se² ≈ 996)",
+   "overall": 84.4,
+   "status": "frontier",
+   "bibkey": null
+  },
+  {
+   "name": "gpt-5 (OpenAI)",
+   "paper": "GSMA Open Telco Leaderboard (HF dataset GSMA/leaderboard, last modified 2026-09-15)",
+   "url": "https://huggingface.co/datasets/GSMA/leaderboard",
+   "table": "leaderboard_scores.csv, column teleqna = [0.838, 0.011657]",
+   "rag": false,
+   "subset": "ot-lite ~1000 (n inferred from printed stderr: p(1-p)/se² ≈ 999)",
+   "overall": 83.8,
+   "status": "frontier",
+   "bibkey": null
+  },
+  {
+   "name": "gemma3-27b (Google)",
+   "paper": "GSMA Open Telco Leaderboard (HF dataset GSMA/leaderboard, last modified 2026-09-15)",
+   "url": "https://huggingface.co/datasets/GSMA/leaderboard",
+   "table": "leaderboard_scores.csv, column teleqna = [0.7131, 0.0045]",
+   "rag": false,
+   "subset": "ot-full ~10000 (n inferred from printed stderr: p(1-p)/se² ≈ 10103)",
+   "overall": 71.31,
+   "status": "open",
+   "bibkey": null
+  },
+  {
+   "name": "qwen3-8b (Qwen)",
+   "paper": "GSMA Open Telco Leaderboard (HF dataset GSMA/leaderboard, last modified 2026-09-15)",
+   "url": "https://huggingface.co/datasets/GSMA/leaderboard",
+   "table": "leaderboard_scores.csv, column teleqna = [0.745, 0.014]",
+   "rag": false,
+   "subset": "ot-lite ~1000 (n inferred from printed stderr: p(1-p)/se² ≈ 969)",
+   "overall": 74.5,
+   "status": "open",
+   "bibkey": null
+  },
+  {
+   "name": "Chat3GPP (Llama3-8B + RAG)",
+   "paper": "Chat3GPP (arXiv 2501.13954)",
+   "url": "https://arxiv.org/abs/2501.13954",
+   "table": "Table II (printed as 0.xxx)",
+   "rag": true,
+   "subset": "TeleQnA 3GPP questions, Release 18 part only (780 q; the paper also has 734 Rel.17 q, dropped: this corpus is Rel.18)",
+   "overall": 79.1,
+   "status": "cited",
+   "bibkey": "huang2025chat3gpp"
+  },
+  {
+   "name": "Llama-3-8B + Telco-oRAG",
+   "paper": "Telco-oRAG (Bornea et al., arXiv 2505.11856v2)",
+   "url": "https://arxiv.org/abs/2505.11856",
+   "table": "Fig. 11 (printed totals & increments; baselines computed = total - increment); 3GPP total: Sec. IV-F text (Fig. 12)",
+   "rag": true,
+   "subset": "Telco-oRAG's '3GPP Standard dataset' = 1,840 3GPP questions from TeleQnA (not ot-full / ot-lite)",
+   "overall": 78.1,
+   "status": "cited",
+   "bibkey": "bornea2025telco"
+  },
+  {
+   "name": "Mistral-7B + Telco-oRAG",
+   "paper": "Telco-oRAG (Bornea et al., arXiv 2505.11856v2)",
+   "url": "https://arxiv.org/abs/2505.11856",
+   "table": "Fig. 11 (printed totals & increments; baselines computed = total - increment); 3GPP total: Sec. IV-F text (Fig. 12)",
+   "rag": true,
+   "subset": "Telco-oRAG's '3GPP Standard dataset' = 1,840 3GPP questions from TeleQnA (not ot-full / ot-lite)",
+   "overall": 74.12,
+   "status": "cited",
+   "bibkey": "bornea2025telco"
+  }
+ ],
+ "C": [
+  {
+   "paper": "Telco-oRAG (Bornea et al., arXiv 2505.11856v2)",
+   "url": "https://arxiv.org/abs/2505.11856",
+   "subset": "3GPP Standard dataset",
+   "status": "cited",
+   "bibkey": "bornea2025telco",
+   "name": "Llama-3-8B",
+   "rag": false,
+   "table": "Fig. 11 (printed totals & increments; baselines computed = total - increment)",
+   "cols": {
+    "overview": 59.0,
+    "specs": 55.8
+   }
+  },
+  {
+   "paper": "Telco-oRAG (Bornea et al., arXiv 2505.11856v2)",
+   "url": "https://arxiv.org/abs/2505.11856",
+   "subset": "3GPP Standard dataset",
+   "status": "cited",
+   "bibkey": "bornea2025telco",
+   "name": "Llama-3-8B + Telco-oRAG",
+   "rag": true,
+   "table": "Fig. 11 (printed totals & increments; baselines computed = total - increment); 3GPP total: Sec. IV-F text (Fig. 12)",
+   "cols": {
+    "overview": 82.3,
+    "specs": 76.0,
+    "total": 78.1
+   }
+  },
+  {
+   "paper": "Telco-oRAG (Bornea et al., arXiv 2505.11856v2)",
+   "url": "https://arxiv.org/abs/2505.11856",
+   "subset": "3GPP Standard dataset",
+   "status": "cited",
+   "bibkey": "bornea2025telco",
+   "name": "Mistral-7B",
+   "rag": false,
+   "table": "Fig. 11 (printed totals & increments; baselines computed = total - increment)",
+   "cols": {
+    "overview": 54.7,
+    "specs": 50.2
+   }
+  },
+  {
+   "paper": "Telco-oRAG (Bornea et al., arXiv 2505.11856v2)",
+   "url": "https://arxiv.org/abs/2505.11856",
+   "subset": "3GPP Standard dataset",
+   "status": "cited",
+   "bibkey": "bornea2025telco",
+   "name": "Mistral-7B + Telco-oRAG",
+   "rag": true,
+   "table": "Fig. 11 (printed totals & increments; baselines computed = total - increment); 3GPP total: Sec. IV-F text (Fig. 12)",
+   "cols": {
+    "overview": 76.3,
+    "specs": 73.0,
+    "total": 74.12
+   }
+  },
+  {
+   "paper": "Chat3GPP (arXiv 2501.13954)",
+   "url": "https://arxiv.org/abs/2501.13954",
+   "subset": "TeleQnA 3GPP questions, Release 18 part only (780 q; the paper also has 734 Rel.17 q, dropped: this corpus is Rel.18)",
+   "status": "cited",
+   "bibkey": "huang2025chat3gpp",
+   "name": "Chat3GPP (Llama3-8B + RAG)",
+   "rag": true,
+   "table": "Table II (printed as 0.xxx)",
+   "cols": {
+    "rel18": 79.1
+   }
+  },
+  {
+   "paper": "Chat3GPP (arXiv 2501.13954)",
+   "url": "https://arxiv.org/abs/2501.13954",
+   "subset": "TeleQnA 3GPP questions, Release 18 part only (780 q; the paper also has 734 Rel.17 q, dropped: this corpus is Rel.18)",
+   "status": "cited",
+   "bibkey": "huang2025chat3gpp",
+   "name": "LLama3-8B-Tele-it (fine-tuned)",
+   "rag": false,
+   "table": "Table II",
+   "cols": {
+    "rel18": 57.1
+   }
+  },
+  {
+   "name": "Phi-2 (2.7B)",
+   "paper": "Telecom Language Models: Must They Be Large? (Piovesan et al., 2024)",
+   "url": "https://arxiv.org/abs/2403.04666",
+   "table": "Table I",
+   "rag": false,
+   "subset": "TeleQnA, whole Standards subjects (full 10k run)",
+   "status": "suggested",
+   "bibkey": null,
+   "cols": {
+    "overview": 48.04,
+    "specs": 44.27
+   }
+  },
+  {
+   "name": "Phi-2 (2.7B) + RAG",
+   "paper": "Telecom Language Models: Must They Be Large?",
+   "url": "https://arxiv.org/abs/2403.04666",
+   "table": "Fig. 2 + Sec. III-B text",
+   "rag": true,
+   "subset": "TeleQnA, whole Standards specifications subject; RAG over 3GPP documents (bge-base-en-v1.5)",
+   "status": "suggested",
+   "bibkey": null,
+   "cols": {
+    "specs": 56.63
+   }
+  }
+ ]
+}

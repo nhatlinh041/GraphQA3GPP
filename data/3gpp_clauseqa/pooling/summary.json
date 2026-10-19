@@ -1,0 +1,421 @@
+{
+ "run": "v54_3000qa_qwen3_01092026",
+ "configs": [
+  "A_bm25_noterm",
+  "A_vector_noterm",
+  "A_kg_notitle",
+  "A_fixed",
+  "A_hybrid",
+  "A_bm25_dense_noterm",
+  "A_bm25_dense_noterm_norr"
+ ],
+ "depth": 5,
+ "judge": "deepseek-v4.1-flash:cloud",
+ "n_questions": 900,
+ "per_class": {
+  "factoid": 300,
+  "procedure": 300,
+  "requirement": 300,
+  "all": 900
+ },
+ "gold_control": {
+  "factoid": {
+   "RELEVANT": 773,
+   "PARTIAL": 70,
+   "NOT_RELEVANT": 40
+  },
+  "procedure": {
+   "RELEVANT": 896,
+   "NOT_RELEVANT": 44,
+   "PARTIAL": 3
+  },
+  "requirement": {
+   "RELEVANT": 301,
+   "PARTIAL": 2,
+   "NOT_RELEVANT": 2
+  },
+  "all": {
+   "RELEVANT": 1970,
+   "PARTIAL": 75,
+   "NOT_RELEVANT": 86
+  }
+ },
+ "new_positives": {
+  "factoid": {
+   "n_gold": 883,
+   "n_unlabelled_judged": 3562,
+   "relevant": 274,
+   "partial": 256,
+   "questions_gaining_gold": 129,
+   "surfaced_by": {
+    "A_bm25_noterm": 142,
+    "A_bm25_dense_noterm_norr": 142,
+    "A_fixed": 129,
+    "A_hybrid": 124,
+    "A_bm25_dense_noterm": 136,
+    "A_vector_noterm": 112,
+    "A_kg_notitle": 67
+   }
+  },
+  "procedure": {
+   "n_gold": 943,
+   "n_unlabelled_judged": 3777,
+   "relevant": 545,
+   "partial": 109,
+   "questions_gaining_gold": 188,
+   "surfaced_by": {
+    "A_bm25_noterm": 246,
+    "A_vector_noterm": 185,
+    "A_hybrid": 172,
+    "A_bm25_dense_noterm_norr": 220,
+    "A_fixed": 165,
+    "A_bm25_dense_noterm": 195,
+    "A_kg_notitle": 145
+   }
+  },
+  "requirement": {
+   "n_gold": 305,
+   "n_unlabelled_judged": 3542,
+   "relevant": 282,
+   "partial": 352,
+   "questions_gaining_gold": 143,
+   "surfaced_by": {
+    "A_bm25_noterm": 199,
+    "A_vector_noterm": 164,
+    "A_fixed": 158,
+    "A_hybrid": 118,
+    "A_bm25_dense_noterm_norr": 203,
+    "A_bm25_dense_noterm": 166,
+    "A_kg_notitle": 13
+   }
+  },
+  "all": {
+   "n_gold": 2131,
+   "n_unlabelled_judged": 10881,
+   "relevant": 1101,
+   "partial": 717,
+   "questions_gaining_gold": 460,
+   "surfaced_by": {
+    "A_bm25_noterm": 587,
+    "A_bm25_dense_noterm_norr": 565,
+    "A_fixed": 452,
+    "A_hybrid": 414,
+    "A_bm25_dense_noterm": 497,
+    "A_vector_noterm": 461,
+    "A_kg_notitle": 225
+   }
+  }
+ },
+ "recall5": {
+  "old": {
+   "A_bm25_noterm": {
+    "factoid": 0.536,
+    "procedure": 0.337,
+    "requirement": 0.94,
+    "all": 0.604
+   },
+   "A_vector_noterm": {
+    "factoid": 0.452,
+    "procedure": 0.265,
+    "requirement": 0.89,
+    "all": 0.536
+   },
+   "A_kg_notitle": {
+    "factoid": 0.663,
+    "procedure": 0.471,
+    "requirement": 0.097,
+    "all": 0.41
+   },
+   "A_fixed": {
+    "factoid": 0.614,
+    "procedure": 0.4,
+    "requirement": 0.862,
+    "all": 0.625
+   },
+   "A_hybrid": {
+    "factoid": 0.611,
+    "procedure": 0.496,
+    "requirement": 0.635,
+    "all": 0.581
+   },
+   "A_bm25_dense_noterm": {
+    "factoid": 0.521,
+    "procedure": 0.266,
+    "requirement": 0.922,
+    "all": 0.57
+   },
+   "A_bm25_dense_noterm_norr": {
+    "factoid": 0.568,
+    "procedure": 0.387,
+    "requirement": 0.952,
+    "all": 0.636
+   }
+  },
+  "strict": {
+   "A_bm25_noterm": {
+    "factoid": 0.543,
+    "procedure": 0.38,
+    "requirement": 0.886,
+    "all": 0.603
+   },
+   "A_vector_noterm": {
+    "factoid": 0.458,
+    "procedure": 0.29,
+    "requirement": 0.801,
+    "all": 0.517
+   },
+   "A_kg_notitle": {
+    "factoid": 0.594,
+    "procedure": 0.416,
+    "requirement": 0.078,
+    "all": 0.363
+   },
+   "A_fixed": {
+    "factoid": 0.596,
+    "procedure": 0.368,
+    "requirement": 0.779,
+    "all": 0.581
+   },
+   "A_hybrid": {
+    "factoid": 0.59,
+    "procedure": 0.46,
+    "requirement": 0.573,
+    "all": 0.541
+   },
+   "A_bm25_dense_noterm": {
+    "factoid": 0.527,
+    "procedure": 0.288,
+    "requirement": 0.832,
+    "all": 0.549
+   },
+   "A_bm25_dense_noterm_norr": {
+    "factoid": 0.576,
+    "procedure": 0.403,
+    "requirement": 0.904,
+    "all": 0.628
+   }
+  },
+  "lenient": {
+   "A_bm25_noterm": {
+    "factoid": 0.505,
+    "procedure": 0.376,
+    "requirement": 0.778,
+    "all": 0.553
+   },
+   "A_vector_noterm": {
+    "factoid": 0.433,
+    "procedure": 0.288,
+    "requirement": 0.709,
+    "all": 0.476
+   },
+   "A_kg_notitle": {
+    "factoid": 0.533,
+    "procedure": 0.402,
+    "requirement": 0.064,
+    "all": 0.333
+   },
+   "A_fixed": {
+    "factoid": 0.545,
+    "procedure": 0.368,
+    "requirement": 0.693,
+    "all": 0.535
+   },
+   "A_hybrid": {
+    "factoid": 0.543,
+    "procedure": 0.442,
+    "requirement": 0.501,
+    "all": 0.495
+   },
+   "A_bm25_dense_noterm": {
+    "factoid": 0.489,
+    "procedure": 0.284,
+    "requirement": 0.74,
+    "all": 0.505
+   },
+   "A_bm25_dense_noterm_norr": {
+    "factoid": 0.542,
+    "procedure": 0.391,
+    "requirement": 0.792,
+    "all": 0.575
+   }
+  }
+ },
+ "hit5": {
+  "old": {
+   "A_bm25_noterm": {
+    "factoid": 0.76,
+    "procedure": 0.56,
+    "requirement": 0.943,
+    "all": 0.754
+   },
+   "A_vector_noterm": {
+    "factoid": 0.663,
+    "procedure": 0.467,
+    "requirement": 0.897,
+    "all": 0.676
+   },
+   "A_kg_notitle": {
+    "factoid": 0.78,
+    "procedure": 0.607,
+    "requirement": 0.097,
+    "all": 0.494
+   },
+   "A_fixed": {
+    "factoid": 0.833,
+    "procedure": 0.647,
+    "requirement": 0.867,
+    "all": 0.782
+   },
+   "A_hybrid": {
+    "factoid": 0.81,
+    "procedure": 0.723,
+    "requirement": 0.64,
+    "all": 0.724
+   },
+   "A_bm25_dense_noterm": {
+    "factoid": 0.747,
+    "procedure": 0.463,
+    "requirement": 0.927,
+    "all": 0.712
+   },
+   "A_bm25_dense_noterm_norr": {
+    "factoid": 0.79,
+    "procedure": 0.63,
+    "requirement": 0.957,
+    "all": 0.792
+   }
+  },
+  "strict": {
+   "A_bm25_noterm": {
+    "factoid": 0.84,
+    "procedure": 0.743,
+    "requirement": 0.957,
+    "all": 0.847
+   },
+   "A_vector_noterm": {
+    "factoid": 0.743,
+    "procedure": 0.62,
+    "requirement": 0.91,
+    "all": 0.758
+   },
+   "A_kg_notitle": {
+    "factoid": 0.783,
+    "procedure": 0.667,
+    "requirement": 0.103,
+    "all": 0.518
+   },
+   "A_fixed": {
+    "factoid": 0.897,
+    "procedure": 0.763,
+    "requirement": 0.903,
+    "all": 0.854
+   },
+   "A_hybrid": {
+    "factoid": 0.88,
+    "procedure": 0.837,
+    "requirement": 0.687,
+    "all": 0.801
+   },
+   "A_bm25_dense_noterm": {
+    "factoid": 0.843,
+    "procedure": 0.647,
+    "requirement": 0.953,
+    "all": 0.814
+   },
+   "A_bm25_dense_noterm_norr": {
+    "factoid": 0.883,
+    "procedure": 0.777,
+    "requirement": 0.983,
+    "all": 0.881
+   }
+  },
+  "lenient": {
+   "A_bm25_noterm": {
+    "factoid": 0.88,
+    "procedure": 0.757,
+    "requirement": 0.967,
+    "all": 0.868
+   },
+   "A_vector_noterm": {
+    "factoid": 0.79,
+    "procedure": 0.647,
+    "requirement": 0.94,
+    "all": 0.792
+   },
+   "A_kg_notitle": {
+    "factoid": 0.803,
+    "procedure": 0.67,
+    "requirement": 0.123,
+    "all": 0.532
+   },
+   "A_fixed": {
+    "factoid": 0.92,
+    "procedure": 0.783,
+    "requirement": 0.93,
+    "all": 0.878
+   },
+   "A_hybrid": {
+    "factoid": 0.913,
+    "procedure": 0.853,
+    "requirement": 0.74,
+    "all": 0.836
+   },
+   "A_bm25_dense_noterm": {
+    "factoid": 0.877,
+    "procedure": 0.687,
+    "requirement": 0.97,
+    "all": 0.844
+   },
+   "A_bm25_dense_noterm_norr": {
+    "factoid": 0.907,
+    "procedure": 0.783,
+    "requirement": 0.987,
+    "all": 0.892
+   }
+  }
+ },
+ "delta_strict_minus_old": {
+  "A_bm25_noterm": {
+   "factoid": 0.007,
+   "procedure": 0.043,
+   "requirement": -0.054,
+   "all": -0.001
+  },
+  "A_vector_noterm": {
+   "factoid": 0.006,
+   "procedure": 0.025,
+   "requirement": -0.089,
+   "all": -0.019
+  },
+  "A_kg_notitle": {
+   "factoid": -0.069,
+   "procedure": -0.055,
+   "requirement": -0.019,
+   "all": -0.047
+  },
+  "A_fixed": {
+   "factoid": -0.018,
+   "procedure": -0.032,
+   "requirement": -0.083,
+   "all": -0.044
+  },
+  "A_hybrid": {
+   "factoid": -0.021,
+   "procedure": -0.036,
+   "requirement": -0.062,
+   "all": -0.04
+  },
+  "A_bm25_dense_noterm": {
+   "factoid": 0.006,
+   "procedure": 0.022,
+   "requirement": -0.09,
+   "all": -0.021
+  },
+  "A_bm25_dense_noterm_norr": {
+   "factoid": 0.008,
+   "procedure": 0.016,
+   "requirement": -0.048,
+   "all": -0.008
+  }
+ }
+}

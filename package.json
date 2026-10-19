@@ -1,0 +1,24 @@
+{
+  "name": "3gpp-qa-demo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "predev": "bash scripts/start-deps.sh",
+    "dev": "concurrently --kill-others-on-fail --names \"rag,react,cf\" --prefix-colors \"cyan,magenta,blue\" \"npm run dev:rag\" \"npm run dev:frontend\" \"npm run dev:tunnel\"",
+    "predev:local": "bash scripts/start-deps.sh",
+    "dev:local": "concurrently --kill-others-on-fail --names \"rag,react\" --prefix-colors \"cyan,magenta\" \"npm run dev:rag\" \"npm run dev:frontend\"",
+    "dev:rag": "cd rag-engine && ${UVICORN:-uvicorn} main:app --host 0.0.0.0 --port ${RAG_PORT:-8000} --reload",
+    "dev:frontend": "cd frontend && npm run dev",
+    "predev:tunnel": "bash scripts/gen-cloudflared.sh",
+    "dev:tunnel": "cloudflared tunnel --config cloudflared-demo.yml run",
+    "rebuild-kg": "bash scripts/rebuild-kg.sh full",
+    "rebuild-kg:kg-only": "bash scripts/rebuild-kg.sh kg-only",
+    "rebuild-kg:embed-only": "bash scripts/rebuild-kg.sh embed-only",
+    "stop": "bash scripts/stop.sh",
+    "install:all": "npm install && cd frontend && npm install",
+    "install:python": "pip install fastapi uvicorn python-dotenv sentence-transformers neo4j requests"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}
